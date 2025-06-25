@@ -40,9 +40,9 @@ const About = () => {
         <footer className="footer-section">
           <div className="footer-content">
             <div className="footer-about">
-              <h3>SHOPSMART</h3>
+              <h3>GeekyStore</h3>
               <p>
-                <strong>Trendsetter</strong> is an e-commerce clothing app,
+                <strong>GeekyStore</strong> is an e-commerce clothing app,
                 bringing you the latest fashion trends with just a tap. Discover
                 a curated collection of stylish apparel, from casual wear to
                 statement pieces, all designed to elevate your wardrobe.

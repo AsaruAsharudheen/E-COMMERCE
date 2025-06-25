@@ -18,24 +18,29 @@ const Homepage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="hero">
-        <img
-          src="/public/fashion-shot-man-beige-shirt-260nw-2443171017.jpg" // Corrected image reference
-          alt="Awesome Sneakers"
-        />
-        <div className="hero-content">
-          <h1>Geeky Store</h1>
-          <h2></h2>
-          <button
-            onClick={() => {
-              Navigate('/user/Shop');
-            }}
-            className="shop-now"
-          >
-            SHOP NOW
-          </button>
+    <section className="hero-container">
+      <div className="hero-left">
+        <div className="hero-text">
+          <div className="hero-label">
+            <div className="hero-line"></div>
+            <p>Welcome to</p>
+          </div>
+          <h1 className="hero-heading">Geeky Store</h1>
+          <div className="hero-button">
+            <button onClick={() => Navigate('/user/Shop')}>
+              SHOP NOW
+            </button>
+          </div>
         </div>
-      </section>
+      </div>
+
+      <div className="hero-right">
+        <img
+          src="/fashion-shot-man-beige-shirt-260nw-2443171017.jpg"
+          alt="Awesome Fashion"
+        />
+      </div>
+    </section>
 
       {/* Image Grid */}
       <LatestCollections />
@@ -76,9 +81,9 @@ const Homepage = () => {
         <footer className="footer-section">
           <div className="footer-content">
             <div className="footer-about">
-              <h3>SHOPSMART</h3>
+              <h3>GeekyStore</h3>
               <p>
-                <strong>Trendsetter</strong> is an e-commerce clothing app,
+                <strong>GeekyStore</strong> is an e-commerce clothing app,
                 bringing you the latest fashion trends with just a tap. Discover
                 a curated collection of stylish apparel, from casual wear to
                 statement pieces, all designed to elevate your wardrobe.

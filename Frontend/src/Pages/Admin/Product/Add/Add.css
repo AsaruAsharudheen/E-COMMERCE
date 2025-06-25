@@ -1,115 +1,122 @@
-.add-product-form {
+.add-form {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 900px;
-  margin: 10px auto;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
   padding: 20px;
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
-.form-group {
-  width: 48%; /* Two items in a row */
-  margin-bottom: 15px;
+.add-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
 }
 
-.form-group label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 5px;
+.add-form .form-group label {
+  font-weight: 500;
+  font-size: 15px;
+  color: #333;
 }
 
-input,
-textarea,
-select {
+.add-form input[type="text"],
+.add-form input[type="number"],
+.add-form textarea,
+.add-form select {
   width: 100%;
   padding: 10px;
+  font-size: 14px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  transition: 0.3s;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  border-color: #007bff;
-  outline: none;
-  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+  border-radius: 4px;
+  resize: vertical;
 }
 
 textarea {
-  resize: vertical;
-  height: 80px;
-}
-
-.add-button {
-  width: 100%;
-  padding: 12px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  background: linear-gradient(135deg, #007bff, #0056b3);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.add-button:hover {
-  background: linear-gradient(135deg, #0056b3, #004494);
-}
-
-.image-container {
-  width: 48%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#productImage {
-  display: none;
-}
-
-.custom-file-upload {
-  padding: 10px 15px;
-  background: #007bff;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-  text-align: center;
-  display: inline-block;
-}
-
-.custom-file-upload:hover {
-  background: #0056b3;
+  min-height: 80px;
 }
 
 .image-preview {
-  width: 100%;
-  max-height: 200px;
-  object-fit: contain;
-  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 8px;
   margin-top: 10px;
 }
 
-.select-container {
-  width: 100%;
+.custom-file-upload {
+  background-color: #2563eb;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  transition: 0.3s ease;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .add-product-form {
-    flex-direction: column;
-    align-items: center;
+.custom-file-upload:hover {
+  background-color: #1d4ed8;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.add-button {
+  width: 160px;
+  padding: 12px 16px;
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+  .add-form {
+    padding: 15px;
   }
 
-  .form-group,
-  .image-container {
+  .add-button {
     width: 100%;
+  }
+
+  .image-preview {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .add-form {
+    padding: 10px;
+  }
+
+  .custom-file-upload {
+    width: 100%;
+    text-align: center;
+  }
+
+  .add-button {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .add-form input,
+  .add-form select,
+  .add-form textarea {
+    font-size: 15px;
   }
 }

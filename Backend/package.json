@@ -1,12 +1,11 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "Doctor booking app backend",
+  "description": "Ecommerce backend",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js",
-    "start": "node server.js"
+    "dev": "nodemon server.js"
   },
   "author": "vishnudeviravi",
   "license": "ISC",
@@ -24,6 +23,6 @@
   },
   "devDependencies": {
     "chalk": "^4.1.2",
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.10"
   }
 }

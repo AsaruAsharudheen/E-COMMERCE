@@ -3,7 +3,7 @@ const cors = require('cors');
 const chalk = require('chalk');
 require('dotenv').config('./.env');
 const db = require('./db');
-const { requestInfo } = require('./middlewares');
+const { requestInfo } = require('./middlewares/index');
 
 const app = express();
 

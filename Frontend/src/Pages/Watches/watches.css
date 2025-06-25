@@ -1,47 +1,105 @@
-/* src/pages/watchCategory.css */
+/* Watches Category Page Container */
 .watches-category-page {
-    padding: 20px;
-    background-color: #f4f4f4;
+  margin: 2.5rem 0;
+  padding: 0 1rem;
+}
+
+/* Title */
+.section-title {
+  text-align: center;
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #111827;
+  padding: 2rem 0;
+}
+
+.section-title .highlight {
+  color: #1d4ed8;
+}
+
+/* Description */
+.section-description {
+  max-width: 75%;
+  margin: 0 auto;
+  color: #4b5563;
+  font-size: 0.75rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+@media (min-width: 640px) {
+  .section-description {
+    font-size: 0.875rem;
   }
-  
-  .category-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
+}
+
+@media (min-width: 768px) {
+  .section-description {
+    font-size: 1rem;
   }
-  
+}
+
+/* Grid Layout */
+.watches-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 1rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 640px) {
   .watches-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  .watch-card {
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s ease;
-    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .watches-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
-  
-  .watch-card:hover {
-    transform: scale(1.05);
+}
+
+@media (min-width: 1024px) {
+  .watches-grid {
+    grid-template-columns: repeat(5, 1fr);
   }
-  
-  .watch-image {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-bottom: 2px solid #f0f0f0;
-  }
-  
-  .watch-name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    padding: 10px;
-  }
-  
+}
+
+/* Card Style */
+.watch-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.watch-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Watch Image */
+.watch-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Product Name */
+.watch-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.75rem 0 1rem;
+  color: #111827;
+}
+
+/* No Products Text */
+.no-products {
+  text-align: center;
+  font-size: 1rem;
+  color: #9ca3af;
+  margin-top: 2rem;
+}
