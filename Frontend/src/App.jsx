@@ -13,7 +13,6 @@ import ProductCategory from './Components/ProductList/productList';
 import OrderForm from './Components/OrderPage/check';
 import OrderListing from './Components/Orders/order';
 import AdminOrderListing from './Pages/Admin/Orders-Admin/Adminorder';
-import AdminLogin from './Pages/Admin/LoginAdmin/Adminlogin';
 import UserSignup from './Pages/UserSignup/signup';
 import UserLogin from './Pages/UserLogin/user';
 import PrivateRoute from './Components/PrivateRoute';
@@ -27,7 +26,6 @@ const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/Admin/Login" element={<AdminLogin />} />
         <Route path="/user/signup" element={<UserSignup />} />
         <Route path="/" element={<HomePage />} />
 
